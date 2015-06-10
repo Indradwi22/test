@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="validapp">
+	<title></title>
+    <head>
+    	<script src="angular.min.js"></script>
+        <script src="myscript.js"></script>
+    </head>
+    <body>
+        <!--requirement and submit-->
+    	<form name="myform" ng-submit="submitted = true; ctrl.submit(form, myform.$valid)" novalidate ng-controller="FormCtrl as ctrl">
+            Name: <input type="text" ng-model="form.firstname" required name="firstname"><br>
+            
+            <div ng-if="myform.firstname.$error.required && submitted">You Must Insert</div>
+    		
+    	</form> 
+        
+        <!--requiremen and touch 
+        <form name="myform">
+            Name: <input type="text" ng-model="form.firstname" required name="firstname"><br>
+            
+            <div ng-if="myform.firstname.$error.required && myform.firstname.$touched">You Must Insert</div>
+    		
+    	</form>-->
+    </body>
+</html>
