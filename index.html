@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<title></title>
+    <head>
+    	<script src="angular.min.js"></script>
+        <script src="myscript.js"></script>
+    </head>
+    <body ng-controller="maincon">
+        <div>{{error}}</div>
+    	<div>
+    		<div>Name: {{user.name}}</div>
+    		<div>Location: {{user.location}}</div>
+    	</div>
+        <div>
+        	<img ng-src="{{user.avatar_url}}" title="{{user.name}}">
+        </div>
+    </body>
+</html>
